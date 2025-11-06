@@ -701,6 +701,10 @@ main.drake-main {
   transform: translateY(-50%);
   padding: 50px;
   z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
 }
 .drake-main .left-sidebar {
   display: none;
@@ -713,6 +717,12 @@ main.drake-main {
 .left-sidebar .sidebar-header {
   margin-bottom: 65px;
 }
+/* 
+.designation {
+  align-self: center;
+  margin-left: 90px;
+} */
+
 .left-sidebar .sidebar-header .designation {
   max-width: 110px;
   text-align: right;
@@ -1305,6 +1315,7 @@ body .body-overlay {
 
 /* 18 - Contact */
 .contact-area {
+  padding-top: 200px;
   padding-bottom: 50px;
 }
 .contact-area .contact-content h3 {
