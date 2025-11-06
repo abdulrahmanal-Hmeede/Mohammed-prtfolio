@@ -1019,6 +1019,11 @@ body .body-overlay {
 .skills .skill {
   margin-bottom: 50px;
 }
+
+.skill-inner {
+  min-height: 230px !important;
+}
+
 .skills .skill .skill-inner {
   border: 2px solid #565656;
   border-radius: 85px;
