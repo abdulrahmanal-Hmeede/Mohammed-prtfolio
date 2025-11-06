@@ -679,7 +679,7 @@ main.drake-main {
 
 /* 05 - Section Header */
 .section-header h1 {
-  font-size: 48px;
+  font-size: 58px !important;
   line-height: 60px;
   color: #fff;
   font-weight: 300;
