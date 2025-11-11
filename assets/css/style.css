@@ -1124,6 +1124,79 @@ body .body-overlay {
   border-color: #ffffff;
 }
 
+/* Portfolio Images Badge */
+.portfolio-images-badge {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(242, 214, 56, 0.95);
+  color: #000;
+  padding: 10px 16px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 14px;
+  backdrop-filter: blur(10px);
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 8px 32px rgba(242, 214, 56, 0.2);
+}
+
+.portfolio-images-badge .badge-text {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.portfolio-images-badge .badge-icon {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  animation: bounce 2s infinite;
+}
+
+.portfolio-item-inner:hover .portfolio-images-badge {
+  transform: translateY(0);
+  opacity: 1;
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .portfolio-images-badge {
+    opacity: 1;
+    transform: translateY(0);
+    bottom: 15px;
+    right: 15px;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
+
 /* 15 - Testimonial */
 .testimonial-item .testimonial-item-inner {
   border: 2px solid #565656;
