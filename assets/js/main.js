@@ -31,9 +31,6 @@ $(function () {
         $(".global-color").removeClass("active");
       }
     );
-
-    // Initialize portfolio image badges
-    initializePortfolioBadges();
   });
 
   $(window)
@@ -199,29 +196,6 @@ $(function () {
 });
 
 // Initialize portfolio image badges
-function initializePortfolioBadges() {
-  $(".portfolio-link").each(function () {
-    var $link = $(this);
-    var imagesData = $link.data("images");
-
-    if (imagesData && Array.isArray(imagesData)) {
-      var imageCount = imagesData.length - 1; // -1 because one image is the main image
-
-      // Check if badge already exists
-      if (!$link.find(".portfolio-images-badge").length) {
-        if (imageCount > 0) {
-          var badgeHTML = `
-                        <div class="portfolio-images-badge">
-                            <span class="badge-text">+${imageCount}</span>
-                            <span class="badge-icon">📷</span>
-                        </div>
-                    `;
-          $link.append(badgeHTML);
-        }
-      }
-    }
-  });
-}
 
 function scroll_animations() {
   // var allow_on_mobile = !0;
